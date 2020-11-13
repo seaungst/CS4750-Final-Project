@@ -69,5 +69,5 @@ class MainActivity : AppCompatActivity() {
         homepage.visibility = View.VISIBLE
     }
 
-    // hi selena
+    // hi selena test 2
 }
