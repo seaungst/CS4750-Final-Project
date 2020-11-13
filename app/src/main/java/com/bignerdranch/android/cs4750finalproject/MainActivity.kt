@@ -21,17 +21,25 @@ class MainActivity : AppCompatActivity() {
         showHomepage()
 
         //Shows sign up page when sign up button is clicked
-        sign_up.setOnClickListener {
+        sign_up_homepage.setOnClickListener {
             showSignUp()
         }
 
         //Shows login page when login button is clicked
-        login.setOnClickListener {
+        login_homepage.setOnClickListener {
             showLogin()
         }
 
+        back_login.setOnClickListener {
+            showHomepage()
+        }
+
+        back_sign_up.setOnClickListener {
+            showHomepage()
+        }
+
         //Attempts to login if login button on login page is clicked
-        login_button.setOnClickListener {
+        login_login.setOnClickListener {
 
             //Prints login success message if true
             if (handler.verifyAccount(login_username.text.toString(), login_password.text.toString())) {
@@ -45,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         //Attempts to save user info if save button on sign up page is clicked
-        save.setOnClickListener {
+        sign_up_sign_up.setOnClickListener {
             handler.insertUserData(username.text.toString(), password.text.toString())
             showHomepage()
         }
@@ -69,6 +77,4 @@ class MainActivity : AppCompatActivity() {
         homepage.visibility = View.VISIBLE
     }
 
-    // hi selena test 3
-    // hi allison test 1
 }

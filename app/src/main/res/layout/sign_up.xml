@@ -5,13 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:alpha="0.3"
-        android:scaleType="centerCrop"
-        android:src="@drawable/popcorn_background" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,6 +12,18 @@
         android:layout_centerVertical="true"
         android:layout_margin="16dp"
         android:orientation="vertical">
+
+        //Sign up age label
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/sign_up_button"
+            android:textColor="#261504"
+            android:padding="8dp"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
 
         //Username input text box (to sign up)
         <EditText
@@ -28,6 +33,7 @@
             android:padding="8dp"
             android:gravity="center"
             android:textSize="25dp"
+            android:textColor="#261504"
             android:layout_margin="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -40,36 +46,37 @@
             android:padding="8dp"
             android:gravity="center"
             android:textSize="25dp"
+            android:textColor="#261504"
             android:inputType="textPassword"
             android:layout_margin="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        //Save button
+        <Button
+            android:id="@+id/sign_up_sign_up"
+            android:text="@string/sign_up_button"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button"
+            android:textColor="#261504"
+            android:textSize="15sp"
+            android:padding="8dp"
+            android:layout_gravity="center_horizontal" />
 
-            //Save button
-            <Button
-                android:id="@+id/save"
-                android:text="@string/save_button"
-                android:layout_margin="8dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" />
-
-            //Back button
-            <Button
-                android:id="@+id/back_sign_up"
-                android:text="@string/back_button"
-                android:layout_margin="8dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" />
-
-        </LinearLayout>
+        //Back button
+        <Button
+            android:id="@+id/back_sign_up"
+            android:text="@string/back_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button"
+            android:textColor="#261504"
+            android:textSize="15sp"
+            android:padding="8dp" />
 
     </LinearLayout>
 

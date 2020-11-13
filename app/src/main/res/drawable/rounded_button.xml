@@ -5,11 +5,8 @@
         android:shape="rectangle">
         <corners
             android:radius="40dp"/>
-        <stroke
-            android:width="2dp"
-            android:color="#f0e8d6"/>
         <solid
-            android:color="#AAf0e8d6"/>
+            android:color="#e7d164"/>
     </shape>
 </item>
 </selector>
