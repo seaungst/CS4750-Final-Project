@@ -1,30 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <ImageView
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:scaleType="centerCrop"
+        android:src="@drawable/popcorn_background" />
+
+    <LinearLayout
+        android:id="@+id/homepage"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/sign_up"
-            android:text="@string/sign_up_button"
+        <TextView
+            android:id="@+id/welcome_text"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/welcome"
+            android:textColor="@android:color/background_dark"
+            android:padding="8dp"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/login"
-            android:text="@string/login_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/welcome_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/welcome_msg"
+            android:textColor="@android:color/background_dark"
+            android:padding="8dp"
+            android:textSize="20sp"/>
 
+        //Homepage layout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            //Sign up button
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/login_button" />
+
+            <Button
+                android:id="@+id/sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/sign_up_button" />
+
+            //Login button
+
+        </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+    //Layout for sign up page
+    <include
+        android:id="@+id/sign_up_layout"
+        android:visibility="gone"
+        layout="@layout/sign_up" />
+
+    //Layout for login page
+    <include
+        android:id="@+id/login_layout"
+        android:visibility="gone"
+        layout="@layout/login" />
+
+</RelativeLayout>

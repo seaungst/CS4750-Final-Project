@@ -1,20 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/username"
-        android:hint="Username"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:scaleType="centerCrop"
+        android:src="@drawable/popcorn_background" />
 
-    <EditText
-        android:id="@+id/password"
-        android:hint="Password"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
 
-</LinearLayout>
+        //Username input text box (to sign up)
+        <EditText
+            android:id="@+id/username"
+            android:hint="Username"
+            android:background="@drawable/rounded_border"
+            android:padding="8dp"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        //Password input text box (to sign up)
+        <EditText
+            android:id="@+id/password"
+            android:hint="Password"
+            android:background="@drawable/rounded_border"
+            android:padding="8dp"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:inputType="textPassword"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            //Save button
+            <Button
+                android:id="@+id/save"
+                android:text="@string/save_button"
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+            //Back button
+            <Button
+                android:id="@+id/back_sign_up"
+                android:text="@string/back_button"
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
