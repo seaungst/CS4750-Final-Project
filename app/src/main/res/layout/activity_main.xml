@@ -8,12 +8,16 @@
     android:layout_gravity="center"
     tools:context=".MainActivity">
 
-    <ImageView
+    <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.4"
-        android:scaleType="centerCrop"
-        android:src="@drawable/popcorn_background" />
+        android:background="#fcc139"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp"
+        android:background="#234798"/>
 
     <LinearLayout
         android:id="@+id/homepage"
@@ -29,9 +33,9 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/welcome"
-            android:textColor="#261504"
-            android:padding="8dp"
-            android:textSize="30sp"
+            android:textColor="#fcc139"
+            android:padding="30dp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
         <TextView
@@ -40,7 +44,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/welcome_msg"
-            android:textColor="#261504"
+            android:textColor="#fcc139"
             android:padding="8dp"
             android:textSize="20sp"/>
 
@@ -51,7 +55,7 @@
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:background="@drawable/rounded_button"
-            android:textColor="#261504"
+            android:textColor="#0e1c3c"
             android:textSize="15sp"
             android:padding="8dp"
             android:text="@string/login_button" />
@@ -63,7 +67,7 @@
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:background="@drawable/rounded_button"
-            android:textColor="#261504"
+            android:textColor="#0e1c3c"
             android:textSize="15sp"
             android:padding="8dp"
             android:text="@string/sign_up_button" />

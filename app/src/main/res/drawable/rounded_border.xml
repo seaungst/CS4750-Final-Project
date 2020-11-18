@@ -7,9 +7,9 @@
             android:radius="40dp"/>
         <stroke
             android:width="2dp"
-            android:color="#f0e8d6"/>
+            android:color="#fee09c"/>
         <solid
-            android:color="#AAf0e8d6"/>
+            android:color="#AAfee09c"/>
     </shape>
 </item>
 </selector>

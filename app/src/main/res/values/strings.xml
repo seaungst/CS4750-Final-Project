@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">CS4750 Final Project</string> //put real app name here
+    <string name="app_name">FlixPix</string>
     <string name="sign_up_button">Sign Up</string>
     <string name="login_button">Login</string>
     <string name="back_button">Back</string>
-    <string name="welcome">Welcome to (app name)!</string>
+    <string name="welcome">Welcome!</string>
     <string name="welcome_msg">Please log in or sign up.</string>
 </resources>

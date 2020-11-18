@@ -3,20 +3,15 @@ package com.bignerdranch.android.cs4750finalproject
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.login.*
 import kotlinx.android.synthetic.main.sign_up.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var handler:DatabaseHelper
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        handler = DatabaseHelper(this)
 
         showHomepage()
 
@@ -38,25 +33,6 @@ class MainActivity : AppCompatActivity() {
             showHomepage()
         }
 
-        //Attempts to login if login button on login page is clicked
-        login_login.setOnClickListener {
-
-            //Prints login success message if true
-            if (handler.verifyAccount(login_username.text.toString(), login_password.text.toString())) {
-                Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
-            }
-
-            //Prints incorrect attempt message if false
-            else {
-                Toast.makeText(this, "Username or password is incorrect.", Toast.LENGTH_SHORT).show()
-            }
-        }
-
-        //Attempts to save user info if save button on sign up page is clicked
-        sign_up_sign_up.setOnClickListener {
-            handler.insertUserData(username.text.toString(), password.text.toString())
-            showHomepage()
-        }
     }
 
     private fun showSignUp() {
