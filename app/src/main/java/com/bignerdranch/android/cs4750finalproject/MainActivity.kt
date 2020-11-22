@@ -6,6 +6,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.login.*
 import kotlinx.android.synthetic.main.sign_up.*
+import kotlinx.android.synthetic.main.start_page.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -43,6 +44,16 @@ class MainActivity : AppCompatActivity() {
             showHomepage()
         }
 
+        // show start page after logging in
+        login_login.setOnClickListener {
+            showStartPage()
+        }
+
+        // show friends list after pressing movie matcher
+        movie_matcher.setOnClickListener {
+            showFriendsPage()
+        }
+
     }
 
     private fun showSignUp() {
@@ -78,6 +89,7 @@ class MainActivity : AppCompatActivity() {
         login_layout.visibility = View.GONE
         homepage.visibility = View.GONE
         start_page_layout.visibility = View.GONE
+//        friends_layout.visibility = View.VISIBLE
     }
 
 
