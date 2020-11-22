@@ -8,9 +8,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_margin="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="100dp"
         android:orientation="vertical">
 
         //Sign up page label
@@ -19,64 +22,68 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:padding="8dp"
             android:text="@string/sign_up_button"
             android:textColor="#fcc139"
-            android:padding="8dp"
             android:textSize="30sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         //Username input text box (to sign up)
+
         <EditText
             android:id="@+id/username"
-            android:hint="Username"
-            android:background="@drawable/rounded_border"
-            android:padding="8dp"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:textColor="#0e1c3c"
-            android:layout_margin="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        //Password input text box (to sign up)
-        <EditText
-            android:id="@+id/password"
-            android:hint="Password"
-            android:background="@drawable/rounded_border"
-            android:padding="8dp"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:textColor="#0e1c3c"
-            android:inputType="textPassword"
-            android:layout_margin="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        //Save button
-        <Button
-            android:id="@+id/sign_up_sign_up"
-            android:text="@string/sign_up_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_border"
+            android:gravity="center"
+            android:hint="@string/username"
+            android:padding="8dp"
+            android:textColor="#0e1c3c"
+            android:textSize="25dp" />
+
+        //Password input text box (to sign up)
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_border"
+            android:gravity="center"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:textColor="#0e1c3c"
+            android:textSize="25dp" />
+
+        //Save button
+
+        <Button
+            android:id="@+id/sign_up_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_margin="10dp"
             android:background="@drawable/rounded_button"
-            android:textColor="#0e1c3c"
-            android:textSize="15sp"
             android:padding="8dp"
-            android:layout_gravity="center_horizontal" />
+            android:text="@string/sign_up_button"
+            android:textColor="#0e1c3c"
+            android:textSize="15sp" />
 
         //Back button
+
         <Button
             android:id="@+id/back_sign_up"
-            android:text="@string/back_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:background="@drawable/rounded_button"
+            android:padding="8dp"
+            android:text="@string/back_button"
             android:textColor="#0e1c3c"
-            android:textSize="15sp"
-            android:padding="8dp" />
+            android:textSize="15sp" />
 
     </LinearLayout>
 
