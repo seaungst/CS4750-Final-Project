@@ -25,8 +25,18 @@ class MainActivity : AppCompatActivity() {
             showLogin()
         }
 
+        //Shows start page after logging in, needs database connection
+        /*login_login.setOnClickListener {
+            showStartPage()
+        }*/
+
         back_login.setOnClickListener {
             showHomepage()
+        }
+
+        //Shows start page after signing up, needs database connection
+        sign_up_sign_up.setOnClickListener {
+            showStartPage()
         }
 
         back_sign_up.setOnClickListener {
@@ -39,18 +49,36 @@ class MainActivity : AppCompatActivity() {
         sign_up_layout.visibility = View.VISIBLE
         login_layout.visibility = View.GONE
         homepage.visibility = View.GONE
+        start_page_layout.visibility = View.GONE
     }
 
     private fun showLogin() {
         sign_up_layout.visibility = View.GONE
         login_layout.visibility = View.VISIBLE
         homepage.visibility = View.GONE
+        start_page_layout.visibility = View.GONE
     }
 
     private fun showHomepage() {
         sign_up_layout.visibility = View.GONE
         login_layout.visibility = View.GONE
         homepage.visibility = View.VISIBLE
+        start_page_layout.visibility = View.GONE
     }
+
+    private fun showStartPage() {
+        sign_up_layout.visibility = View.GONE
+        login_layout.visibility = View.GONE
+        homepage.visibility = View.GONE
+        start_page_layout.visibility = View.VISIBLE
+    }
+
+    private fun showFriendsPage() {
+        sign_up_layout.visibility = View.GONE
+        login_layout.visibility = View.GONE
+        homepage.visibility = View.GONE
+        start_page_layout.visibility = View.GONE
+    }
+
 
 }
