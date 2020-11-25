@@ -76,7 +76,7 @@ class FriendsListFragment : Fragment() {
 
     private inner class FriendAdapter(var friends:List<Friend>) : RecyclerView.Adapter<FriendHolder>() {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FriendHolder {
-            val view = layoutInflater.inflate(R.layout.list_itme_friend, parent, false)
+            val view = layoutInflater.inflate(R.layout.list_item_friend, parent, false)
             return FriendHolder(view)
         }
 
