@@ -13,7 +13,7 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
-        // show friends list after pressing movie matcher
+        // show fragment_friend_list list after pressing movie matcher
         movie_matcher.setOnClickListener {
             showFriendsPage()
         }
