@@ -16,8 +16,7 @@
         android:layout_marginBottom="100dp"
         android:orientation="vertical">
 
-        //Login Page label
-
+        <!--Login Page label-->
         <TextView
             android:id="@+id/welcome_text"
             android:layout_width="match_parent"
@@ -29,8 +28,7 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
-        //Username input text box (to log in)
-
+        <!--Username input text box (to log in)-->
         <EditText
             android:id="@+id/login_username"
             android:layout_width="match_parent"
@@ -43,8 +41,7 @@
             android:textColor="#0e1c3c"
             android:textSize="25dp" />
 
-        //Password input text box (to log in)
-
+        <!--Password input text box (to log in)-->
         <EditText
             android:id="@+id/login_password"
             android:layout_width="match_parent"
@@ -58,29 +55,27 @@
             android:textColor="#0e1c3c"
             android:textSize="25dp" />
 
-        //Login button
-
+        <!--Login button-->
         <Button
             android:id="@+id/login_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="8dp"
-            android:background="@drawable/rounded_button"
+            android:background="@drawable/rounded_button_yellow"
             android:padding="8dp"
             android:text="@string/login_button"
             android:textColor="#0e1c3c"
             android:textSize="15sp" />
 
-        //Back button
-
+        <!--Back button-->
         <Button
             android:id="@+id/back_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="8dp"
-            android:background="@drawable/rounded_button"
+            android:background="@drawable/rounded_button_yellow"
             android:padding="8dp"
             android:text="@string/back_button"
             android:textColor="#0e1c3c"

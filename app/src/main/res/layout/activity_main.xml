@@ -20,8 +20,8 @@
         android:background="#234798"/>
 
     <ImageView
-        android:layout_width="114dp"
-        android:layout_height="117dp"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
         android:layout_margin="30dp"
         android:src="@drawable/logo_transparent" />
 
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:background="@drawable/rounded_button"
+            android:background="@drawable/rounded_button_yellow"
             android:padding="8dp"
             android:text="@string/login_button"
             android:textColor="#0e1c3c"
@@ -91,7 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:background="@drawable/rounded_button"
+            android:background="@drawable/rounded_button_yellow"
             android:padding="8dp"
             android:text="@string/sign_up_button"
             android:textColor="#0e1c3c"
@@ -108,10 +108,5 @@
         android:id="@+id/login_layout"
         android:visibility="gone"
         layout="@layout/login" />
-
-    <include
-        android:id="@+id/start_page_layout"
-        android:visibility="gone"
-        layout="@layout/start_page" />
 
 </RelativeLayout>
