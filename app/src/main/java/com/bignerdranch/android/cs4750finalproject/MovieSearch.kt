@@ -1,4 +1,4 @@
-package com.bignerdranch.android.cs4750finalproject.Remote
+package com.bignerdranch.android.cs4750finalproject
 
 class MovieSearch {
     //hold the imdb posters by importin database garb
