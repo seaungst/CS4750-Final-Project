@@ -4,6 +4,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#234798"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="60dp"
+        android:background="#fcc139"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="58dp"
+        android:layout_margin="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/logo_transparent" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="60dp"

@@ -94,6 +94,6 @@
     <include
         android:id="@+id/watch_list_layout"
         android:visibility="gone"
-        layout="@layout/watch_list" />
+        layout="@layout/activity_watch_list" />
 
 </RelativeLayout>

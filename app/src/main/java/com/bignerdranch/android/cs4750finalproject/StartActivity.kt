@@ -4,9 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_start.*
-import kotlinx.android.synthetic.main.watch_list.*
 
 class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +22,8 @@ class StartActivity : AppCompatActivity() {
         }
 
         watch_list.setOnClickListener {
-            showWatchList()
+            val watchListIntent = Intent(this, WatchListActivity::class.java)
+            startActivity(watchListIntent)
         }
     }
 
@@ -42,14 +41,6 @@ class StartActivity : AppCompatActivity() {
             supportFragmentManager.beginTransaction().add(R.id.fragment_container, fragment)
                 .commit()
         }
-    }
-
-    private fun showWatchList() {
-        activity_start_layout.visibility = View.GONE
-        top_text_start.visibility = View.GONE
-        watch_list_layout.visibility = View.VISIBLE
-        //start_page_layout.visibility = View.GONE
-        //friends_layout.visibility = View.GONE
     }
 
 }
