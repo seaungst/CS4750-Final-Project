@@ -40,10 +40,10 @@
             android:padding="8dp"
             android:textColor="#0e1c3c"
             android:textSize="25dp" />
+            <!--android:drawableLeft="@drawable/"-->
 
         <!--Password input text box (to sign up)-->
         <EditText
-            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"

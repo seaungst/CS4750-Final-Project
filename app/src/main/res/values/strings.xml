@@ -8,7 +8,12 @@
     <string name="welcome_msg">Please log in or sign up.</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-
+    <string name="email">Email</string>
+    <string name="success_message">Sign-Up Successful!</string>
+    <string name="error_login">Incorrect Username or Password.</string>
+    <string name="error_username">Username already exists.</string>
+    <string name="error_no_username">Enter valid username.</string>
+    <string name="error_no_password">Enter valid password.</string>
     <string name="friends_search">Search for Friends</string>
     <string name="friends_search_clear">Clear Search</string>
     <string name="watch_list">Watch List</string>
