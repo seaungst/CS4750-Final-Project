@@ -99,14 +99,4 @@
 
     </LinearLayout>
 
-    <include
-        android:id="@+id/sign_up_layout"
-        android:visibility="gone"
-        layout="@layout/sign_up" />
-
-    <include
-        android:id="@+id/login_layout"
-        android:visibility="gone"
-        layout="@layout/login" />
-
 </RelativeLayout>

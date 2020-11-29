@@ -5,6 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fcc139"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp"
+        android:background="#234798"/>
+
+    <ImageView
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_margin="30dp"
+        android:src="@drawable/logo_transparent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="107dp"
+        android:layout_above="@+id/homepage"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/app_name"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="#fee09c"
+        android:textSize="70sp"
+        android:textStyle="bold" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,21 +50,21 @@
         android:layout_marginBottom="100dp"
         android:orientation="vertical">
 
-        <!--Sign up Page label-->
+        <!--Login Page label-->
         <TextView
             android:id="@+id/welcome_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="8dp"
-            android:text="@string/sign_up_button"
+            android:text="@string/login_button"
             android:textColor="#fcc139"
             android:textSize="30sp"
             android:textStyle="bold" />
 
-        <!--Username input text box (to sign up)-->
+        <!--Username input text box (to log in)-->
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/login_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -40,10 +74,10 @@
             android:padding="8dp"
             android:textColor="#0e1c3c"
             android:textSize="25dp" />
-            <!--android:drawableLeft="@drawable/"-->
 
-        <!--Password input text box (to sign up)-->
+        <!--Password input text box (to log in)-->
         <EditText
+            android:id="@+id/login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -55,26 +89,26 @@
             android:textColor="#0e1c3c"
             android:textSize="25dp" />
 
-        <!--Save button-->
+        <!--Login button-->
         <Button
-            android:id="@+id/sign_up_sign_up"
+            android:id="@+id/login_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="10dp"
+            android:layout_margin="8dp"
             android:background="@drawable/rounded_button_yellow"
             android:padding="8dp"
-            android:text="@string/sign_up_button"
+            android:text="@string/login_button"
             android:textColor="#0e1c3c"
             android:textSize="15sp" />
 
         <!--Back button-->
         <Button
-            android:id="@+id/back_sign_up"
+            android:id="@+id/back_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
             android:background="@drawable/rounded_button_yellow"
             android:padding="8dp"
             android:text="@string/back_button"
