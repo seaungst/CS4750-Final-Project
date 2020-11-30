@@ -43,17 +43,20 @@ class FriendsListFragment : Fragment() {
         return view
     }
 
+    //function for showing menu (search bar), 11/28 - not showing up right now
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.fragment_friend_list, menu)
     }
 
+    //function for updating more friends when scrolling
     private fun updateUI() {
         val friends = friendsListViewModel.friends
         adapter = FriendAdapter(friends)
         friendsRecyclerView.adapter = adapter
     }
 
+    //function for what happens once a friend is clicked, 11/28 - toast pops up with "Friend #0" notif
     private inner class FriendHolder(view:View) : RecyclerView.ViewHolder(view), View.OnClickListener {
         private lateinit var friend : Friend
 
