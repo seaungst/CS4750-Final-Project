@@ -40,7 +40,9 @@
 
     <LinearLayout
         android:id="@+id/activity_start_layout"
-        android:layout_width="wrap_content"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
@@ -55,7 +57,7 @@
             android:padding="20dp"
             android:text="@string/watch_list"
             android:textColor="#fee09c"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:drawableLeft="@drawable/watch_icon"/>
 
         <Button
@@ -67,7 +69,7 @@
             android:padding="20dp"
             android:text="@string/search_movies"
             android:textColor="#fee09c"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:drawableLeft="@drawable/search_icon"/>
 
         <Button
@@ -80,7 +82,7 @@
             android:padding="20dp"
             android:text="@string/movie_matcher"
             android:textColor="#fee09c"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:drawableLeft="@drawable/friend_icon"/>
 
         <Button
@@ -91,7 +93,7 @@
             android:padding="20dp"
             android:text="@string/sign_out_button"
             android:textColor="#fee09c"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:drawableLeft="@drawable/sign_out_icon"/>
 
     </LinearLayout>
