@@ -16,7 +16,7 @@ class MovieFetcher {
     private val movieApi: MovieDatabaseApi
     init {
         val retrofit: Retrofit = Retrofit.Builder()
-            .baseUrl("imdb.com")
+            .baseUrl("https://www.imdb.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         movieApi = retrofit.create(MovieDatabaseApi::class.java)
