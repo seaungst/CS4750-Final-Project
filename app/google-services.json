@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "47955062153",
+    "firebase_url": "https://cs4750-final-project.firebaseio.com",
+    "project_id": "cs4750-final-project",
+    "storage_bucket": "cs4750-final-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47955062153:android:6bc17956d9e98a68e08558",
+        "android_client_info": {
+          "package_name": "com.bignerdranch.android.cs4750finalproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47955062153-tnp4mv2tbulo01osvn4naeuk9dlofoec.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb4iNuIHK2Lqg46SjORwHAWCdJbmIepLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47955062153-tnp4mv2tbulo01osvn4naeuk9dlofoec.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
