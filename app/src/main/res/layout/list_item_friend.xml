@@ -9,6 +9,9 @@
         android:id="@+id/friend_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Friend Title" />
+        android:text="Friend Title"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:padding="20dp"/>
 
 </LinearLayout>

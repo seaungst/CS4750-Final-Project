@@ -62,7 +62,6 @@ class FriendsListFragment : Fragment() {
 
         private val titleTextView: TextView = itemView.findViewById(R.id.friend_title)
 
-
         init {
             itemView.setOnClickListener(this)
         }

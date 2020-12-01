@@ -4,8 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_start.*
 
 class StartActivity : AppCompatActivity() {
@@ -38,7 +36,7 @@ class StartActivity : AppCompatActivity() {
 
     fun showFriendsPage(view: View) {
 
-        val intent = Intent(this, MovieMatcherActivity::class.java)
+        val intent = Intent(this, FriendsActivity::class.java)
         startActivity(intent)
 
         /*activity_start_layout.visibility = View.GONE
