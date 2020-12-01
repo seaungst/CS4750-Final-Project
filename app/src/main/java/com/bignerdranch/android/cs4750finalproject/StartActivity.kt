@@ -29,6 +29,11 @@ class StartActivity : AppCompatActivity() {
             val watchListIntent = Intent(this, WatchListActivity::class.java)
             startActivity(watchListIntent)
         }
+
+        search_movies.setOnClickListener {
+            val searchMoviesIntent = Intent(this, MovieSearchActivity::class.java)
+            startActivity(searchMoviesIntent)
+        }
     }
 
     fun showFriendsPage(view: View) {

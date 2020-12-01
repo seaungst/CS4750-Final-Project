@@ -73,8 +73,8 @@
             android:hint="@string/email"
             android:padding="8dp"
             android:textColor="#0e1c3c"
-            android:textSize="25dp" />
-            <!--android:drawableLeft="@drawable/"-->
+            android:textSize="25dp"
+            android:drawableLeft="@drawable/email"/>
 
         <!--Password input text box (to sign up)-->
         <EditText
@@ -88,7 +88,8 @@
             android:inputType="textPassword"
             android:padding="8dp"
             android:textColor="#0e1c3c"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:drawableLeft="@drawable/lock_icon"/>
 
         <!--Save button-->
         <Button
