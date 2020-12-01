@@ -64,13 +64,13 @@
 
         <!--Username input text box (to sign up)-->
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/sign_up_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:background="@drawable/rounded_border"
             android:gravity="center"
-            android:hint="@string/username"
+            android:hint="@string/email"
             android:padding="8dp"
             android:textColor="#0e1c3c"
             android:textSize="25dp" />
@@ -78,6 +78,7 @@
 
         <!--Password input text box (to sign up)-->
         <EditText
+            android:id="@+id/sign_up_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
