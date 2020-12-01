@@ -29,14 +29,14 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun doLogin() {
-        //If no email inputted
+        //If no email_icon inputted
         if(login_email.text.toString().isEmpty()){
             login_email.error = "Please enter an email address."
             login_email.requestFocus()
             return
         }
 
-        //If invalid email inputted
+        //If invalid email_icon inputted
         if(!Patterns.EMAIL_ADDRESS.matcher(login_email.text.toString()).matches()) {
             login_email.error = "Please enter a valid email address."
             login_email.requestFocus()

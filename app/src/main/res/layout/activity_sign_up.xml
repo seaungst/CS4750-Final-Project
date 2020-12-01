@@ -74,7 +74,7 @@
             android:padding="8dp"
             android:textColor="#0e1c3c"
             android:textSize="25dp"
-            android:drawableLeft="@drawable/email"/>
+            android:drawableLeft="@drawable/email_icon"/>
 
         <!--Password input text box (to sign up)-->
         <EditText
@@ -89,20 +89,21 @@
             android:padding="8dp"
             android:textColor="#0e1c3c"
             android:textSize="25dp"
-            android:drawableLeft="@drawable/lock_icon"/>
+            android:drawableLeft="@drawable/password_icon"/>
 
         <!--Save button-->
         <Button
             android:id="@+id/sign_up_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center"
             android:layout_margin="10dp"
             android:background="@drawable/rounded_button_yellow"
             android:padding="8dp"
             android:text="@string/sign_up_button"
             android:textColor="#0e1c3c"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:drawableLeft="@drawable/sign_up_icon"/>
 
         <!--Back button-->
         <Button
@@ -115,7 +116,8 @@
             android:padding="8dp"
             android:text="@string/back_button"
             android:textColor="#0e1c3c"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:drawableLeft="@drawable/back_button"/>
 
     </LinearLayout>
 

@@ -29,14 +29,14 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun signUpUser() {
-        //If no email inputted
+        //If no email_icon inputted
         if(sign_up_email.text.toString().isEmpty()){
             sign_up_email.error = "Please enter an email address."
             sign_up_email.requestFocus()
             return
         }
 
-        //If invalid email format
+        //If invalid email_icon format
         if(!Patterns.EMAIL_ADDRESS.matcher(sign_up_email.text.toString()).matches()) {
             sign_up_email.error = "Please enter a valid email address."
             sign_up_email.requestFocus()

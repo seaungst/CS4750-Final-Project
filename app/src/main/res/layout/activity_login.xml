@@ -60,7 +60,7 @@
             android:text="@string/login_button"
             android:textColor="#fcc139"
             android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
 
         <!--Username input text box (to log in)-->
         <EditText
@@ -73,7 +73,8 @@
             android:hint="@string/email"
             android:padding="8dp"
             android:textColor="#0e1c3c"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:drawableLeft="@drawable/email_icon"/>
 
         <!--Password input text box (to log in)-->
         <EditText
@@ -87,7 +88,8 @@
             android:inputType="textPassword"
             android:padding="8dp"
             android:textColor="#0e1c3c"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:drawableLeft="@drawable/password_icon"/>
 
         <!--Login button-->
         <Button
@@ -100,7 +102,8 @@
             android:padding="8dp"
             android:text="@string/login_button"
             android:textColor="#0e1c3c"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:drawableLeft="@drawable/login_icon"/>
 
         <!--Back button-->
         <Button
@@ -113,7 +116,8 @@
             android:padding="8dp"
             android:text="@string/back_button"
             android:textColor="#0e1c3c"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:drawableLeft="@drawable/back_button"/>
 
     </LinearLayout>
 
