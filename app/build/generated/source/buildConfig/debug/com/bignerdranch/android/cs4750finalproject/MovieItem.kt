@@ -8,7 +8,7 @@ data class MovieItem(
     var title: String = "",
     var id: String = "",
     @SerializedName("url_s") var url: String = ""
-    **/
+     **/
     var title: String = "",
     var id: String = "",
     @SerializedName("url_s") var url: String = "",
