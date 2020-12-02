@@ -36,9 +36,9 @@ class MovieFetcher {
                 response: Response<ImbdResponse>
             ) {
                 Log.d(TAG, "Response received")
-                val ImbdResponse: ImbdResponse? = response.body()
+                val imbdResponse: ImbdResponse? = response.body()
                 val photoResponse: MovieResponse? =
-                    ImbdResponse?.movie
+                    imbdResponse?.movie
                 var movieItems: List<MovieItem> =
                     photoResponse?.movieItem
                         ?: mutableListOf()
