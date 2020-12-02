@@ -38,16 +38,15 @@
         android:textStyle="bold"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_recyclerView"
+        android:id="@+id/wl_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="70dp"
-        tools:itemCount="20"
+        tools:itemCount="50"
         tools:listitem="@layout/movie_item_layout" />
-
 
     <ImageView
         android:layout_width="60dp"

@@ -17,6 +17,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".StartActivity" />
         </activity>
+        <activity android:name=".MovieSearchActivity" />
         <activity android:name=".WatchListActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity" />

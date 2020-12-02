@@ -7,30 +7,30 @@ import kotlinx.android.synthetic.main.activity_watch_list.*
 
 class WatchListActivity : AppCompatActivity() {
 
-    private var movieTitlesList = mutableListOf<String>()
-    private var movieGenresList = mutableListOf<String>()
-    private var moviePostersList = mutableListOf<Int>()
+    private var movieTitlesListWL = mutableListOf<String>()
+    private var movieGenresListWL = mutableListOf<String>()
+    private var moviePostersListWL = mutableListOf<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_watch_list)
 
-        postToList()
+        postToListWL()
 
-        rv_recyclerView.layoutManager = LinearLayoutManager(this)
-        rv_recyclerView.adapter = RecyclerAdapter(movieTitlesList,
-            movieGenresList, moviePostersList)
+        wl_recyclerView.layoutManager = LinearLayoutManager(this)
+        wl_recyclerView.adapter = RecyclerAdapter(movieTitlesListWL,
+            movieGenresListWL, moviePostersListWL)
     }
 
-    private fun addToList(movie_title: String, movie_genre: String, movie_poster: Int){
-        movieTitlesList.add(movie_title)
-        movieGenresList.add(movie_genre)
-        moviePostersList.add(movie_poster)
+    private fun addToListWL(movie_titleWL: String, movie_genreWL: String, movie_posterWL: Int){
+        movieTitlesListWL.add(movie_titleWL)
+        movieGenresListWL.add(movie_genreWL)
+        moviePostersListWL.add(movie_posterWL)
     }
 
-    private fun postToList() {
+    private fun postToListWL() {
         for (i in 1..25) {
-            addToList("Movie Title $i",
+            addToListWL("Movie Title $i",
                 "Movie Genre $i", R.drawable.movie_placeholder)
         }
     }

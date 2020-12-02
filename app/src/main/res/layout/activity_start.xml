@@ -40,25 +40,13 @@
 
     <LinearLayout
         android:id="@+id/activity_start_layout"
-        android:paddingRight="20dp"
-        android:paddingLeft="20dp"
+        android:paddingRight="30dp"
+        android:paddingLeft="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:orientation="vertical">
-
-        <Button
-            android:id="@+id/watch_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/rounded_button_blue"
-            android:padding="20dp"
-            android:text="@string/watch_list"
-            android:textColor="#fee09c"
-            android:textSize="25sp"
-            android:drawableLeft="@drawable/watch_icon"/>
 
         <Button
             android:id="@+id/search_movies"
@@ -71,6 +59,18 @@
             android:textColor="#fee09c"
             android:textSize="25sp"
             android:drawableLeft="@drawable/search_icon"/>
+
+        <Button
+            android:id="@+id/watch_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_button_blue"
+            android:padding="20dp"
+            android:text="@string/watch_list"
+            android:textColor="#fee09c"
+            android:textSize="25sp"
+            android:drawableLeft="@drawable/watch_icon"/>
 
         <Button
             android:id="@+id/movie_matcher"
