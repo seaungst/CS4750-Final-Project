@@ -11,20 +11,27 @@
         android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FriendsActivity" android:parentActivityName=".StartActivity">
+        <activity android:name=".MovieDetailsActivity"></activity>
+        <activity
+            android:name=".FriendsActivity"
+            android:parentActivityName=".StartActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".StartActivity" />
         </activity>
-        <activity android:name=".MovieSearchActivity" android:parentActivityName=".StartActivity">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".StartActivity"/>
+        <activity
+            android:name=".MovieSearchActivity"
+            android:parentActivityName=".StartActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StartActivity" />
         </activity>
-        <activity android:name=".WatchListActivity" android:parentActivityName=".StartActivity">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".StartActivity"/>
+        <activity
+            android:name=".WatchListActivity"
+            android:parentActivityName=".StartActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StartActivity" />
         </activity>
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity" />

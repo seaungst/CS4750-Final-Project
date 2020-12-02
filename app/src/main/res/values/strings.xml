@@ -1,4 +1,7 @@
 <resources>
+
+    <!--MOVIE DATABASE IMPLEMENTATION - ALLISON-->
+
     <string name="app_name">FlixPix</string>
 
     <string name="sign_up_button">Sign Up</string>
@@ -21,6 +24,7 @@
     <string name="friends_list">Friends List</string>
     <string name="movie_view">( Movie View )</string>
 
+<!--Strings for movie database implementation - Allison-->
     <string name="popular">Popular</string>
     <string name="most_popular_movies">Most popular movies</string>
     <string name="error_fetch_movies">Please check your internet connection</string>
@@ -28,4 +32,6 @@
     <string name="highest_rated_movies">Highest rated movies of all time</string>
     <string name="upcoming">Upcoming</string>
     <string name="stay_updated">Stay updated with the latest movies</string>
+
+
 </resources>
