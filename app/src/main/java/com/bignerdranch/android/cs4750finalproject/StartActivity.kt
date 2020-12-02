@@ -12,12 +12,6 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
-
-        // show fragment_friend_list list after pressing movie matcher
-        /*movie_matcher.setOnClickListener {
-            showFriendsPage()
-        }*/
-
         sign_out.setOnClickListener {
             val signOutIntent = Intent(this, MainActivity::class.java)
             startActivity(signOutIntent)
@@ -35,23 +29,8 @@ class StartActivity : AppCompatActivity() {
     }
 
     fun showFriendsPage(view: View) {
-
         val intent = Intent(this, FriendsActivity::class.java)
         startActivity(intent)
-
-        /*activity_start_layout.visibility = View.GONE
-        top_text_start.visibility = View.GONE
-        //friends_layout.visibility = View.VISIBLE
-
-        setContentView(R.layout.activity_friends)
-
-        val currentFragment = supportFragmentManager.findFragmentById(R.id.fragment_container)
-
-        if (currentFragment == null) {
-            val fragment = FriendsListFragment.newInstance()
-            supportFragmentManager.beginTransaction().add(R.id.fragment_container, fragment)
-                .commit()
-        }*/
     }
 
 }
