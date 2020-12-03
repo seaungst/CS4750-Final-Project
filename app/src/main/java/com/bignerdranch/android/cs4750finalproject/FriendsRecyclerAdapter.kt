@@ -1,22 +1,24 @@
 package com.bignerdranch.android.cs4750finalproject
 
 import android.view.*
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
-class FriendsRecyclerAdapter (private var friend_title: List<String>)
+class FriendsRecyclerAdapter (private var friend_title: List<String>, private var friend_icon: List<Int>)
     : RecyclerView.Adapter<FriendsRecyclerAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val friendTitle: TextView = itemView.findViewById(R.id.friend_title)
+        val friendIcon: ImageView = itemView.findViewById(R.id.friend_icon)
 
         init {
             itemView.setOnClickListener { v : View ->
                 val position: Int = adapterPosition
                 Toast.makeText(itemView.context,
-                    "Friend ${position + 1} pressed!",
+                    "Friend ${position + 1} added!",
                     Toast.LENGTH_SHORT).show()
             }
         }
@@ -34,6 +36,7 @@ class FriendsRecyclerAdapter (private var friend_title: List<String>)
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.friendTitle.text = friend_title[position]
+        holder.friendIcon.setImageResource(friend_icon[position])
     }
 
 }

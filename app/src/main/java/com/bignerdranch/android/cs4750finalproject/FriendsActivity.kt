@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.activity_watch_list.*
 class FriendsActivity : AppCompatActivity() {
 
     private var friendsTitleList = mutableListOf<String>()
+    private var friendsIconList = mutableListOf<Int>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +19,7 @@ class FriendsActivity : AppCompatActivity() {
         postToList()
 
         friends_rv_recyclerView.layoutManager = LinearLayoutManager(this)
-        friends_rv_recyclerView.adapter = FriendsRecyclerAdapter(friendsTitleList)
+        friends_rv_recyclerView.adapter = FriendsRecyclerAdapter(friendsTitleList, friendsIconList)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -27,13 +28,14 @@ class FriendsActivity : AppCompatActivity() {
         return true
     }
 
-    private fun addToList(friends_title: String){
+    private fun addToList(friends_title: String, friends_icon: Int){
         friendsTitleList.add(friends_title)
+        friendsIconList.add(friends_icon)
     }
 
     private fun postToList() {
         for (i in 1..25) {
-            addToList("Friend $i")
+            addToList("Friend $i", R.mipmap.logo_round)
         }
     }
 }
