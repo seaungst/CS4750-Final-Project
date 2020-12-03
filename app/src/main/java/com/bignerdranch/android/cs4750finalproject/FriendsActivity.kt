@@ -33,7 +33,7 @@ class FriendsActivity : AppCompatActivity() {
 
     private fun postToList() {
         for (i in 1..25) {
-            addToList("Friend # $i")
+            addToList("Friend $i")
         }
     }
 }

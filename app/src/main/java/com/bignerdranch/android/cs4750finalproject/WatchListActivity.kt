@@ -2,6 +2,7 @@ package com.bignerdranch.android.cs4750finalproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_watch_list.*
 
@@ -20,6 +21,12 @@ class WatchListActivity : AppCompatActivity() {
         wl_recyclerView.layoutManager = LinearLayoutManager(this)
         wl_recyclerView.adapter = RecyclerAdapter(movieTitlesListWL,
             movieGenresListWL, moviePostersListWL)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.movie_search_bar, menu)
+        return true
     }
 
     private fun addToListWL(movie_titleWL: String, movie_genreWL: String, movie_posterWL: Int){

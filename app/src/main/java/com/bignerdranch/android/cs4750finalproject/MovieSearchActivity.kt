@@ -4,6 +4,7 @@ package com.bignerdranch.android.cs4750finalproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_movie_search.*
 
@@ -26,6 +27,12 @@ class MovieSearchActivity : AppCompatActivity() {
         sm_recyclerView.layoutManager = LinearLayoutManager(this)
         sm_recyclerView.adapter = RecyclerAdapter(movieTitlesListMS,
             movieGenresListMS, moviePostersListMS)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.movie_search_bar, menu)
+        return true
     }
 
     private fun addToListMS(movie_titleMS: String, movie_genreMS: String, movie_posterMS: Int){
