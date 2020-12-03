@@ -1,17 +1,12 @@
 package com.bignerdranch.android.cs4750finalproject
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
-import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_movie_details.*
-import kotlinx.android.synthetic.main.activity_movie_details.add_searched_movie
 
 const val MOVIE_BACKDROP = "extra_movie_backdrop"
 const val MOVIE_POSTER = "extra_movie_poster"
@@ -46,10 +41,6 @@ class MovieDetailsActivity : AppCompatActivity() {
             populateDetails(extras)
         } else {
             finish()
-        }
-
-        add_searched_movie.setOnClickListener {
-            Toast.makeText(this, "Added", Toast.LENGTH_SHORT).show()
         }
     }
 
