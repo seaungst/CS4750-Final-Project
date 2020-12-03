@@ -21,8 +21,9 @@
     <ImageView
         android:layout_width="115dp"
         android:layout_height="115dp"
-        android:layout_margin="30dp"
-        android:src="@drawable/logo_transparent" />
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:src="@mipmap/logo_round"/>
 
     <TextView
         android:layout_width="wrap_content"

@@ -18,13 +18,13 @@
 
     <ImageView
         android:layout_width="60dp"
-        android:layout_height="58dp"
+        android:layout_height="60dp"
         android:layout_margin="0dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
-        android:src="@drawable/logo_transparent" />
+        android:src="@mipmap/logo_round"/>
 
     <TextView
         android:id="@+id/top_text_start"

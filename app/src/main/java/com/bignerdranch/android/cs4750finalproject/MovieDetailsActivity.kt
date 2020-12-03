@@ -2,6 +2,8 @@ package com.bignerdranch.android.cs4750finalproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
@@ -46,7 +48,7 @@ class MovieDetailsActivity : AppCompatActivity() {
         }
 
         add_searched_movie.setOnClickListener{
-            Toast.makeText(this, "Added", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Added to Watch List", Toast.LENGTH_SHORT).show()
         }
     }
 

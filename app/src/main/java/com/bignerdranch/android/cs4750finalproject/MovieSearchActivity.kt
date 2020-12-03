@@ -15,7 +15,7 @@ class MovieSearchActivity : AppCompatActivity() {
     private lateinit var moviesAdapter: MoviesAdapter
     private lateinit var moviesLayoutMgr: GridLayoutManager
 
-    private var popularMoviesPage = 1
+    private var moviesPage = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +39,7 @@ class MovieSearchActivity : AppCompatActivity() {
 
     private fun getPopularMovies() {
         MoviesRepository.getPopularMovies(
-            popularMoviesPage,
+            moviesPage,
             ::onPopularMoviesFetched,
             ::onError
         )
@@ -59,7 +59,7 @@ class MovieSearchActivity : AppCompatActivity() {
 
                 if (firstVisibleItem + visibleItemCount >= totalItemCount / 2) {
                     movies.removeOnScrollListener(this)
-                    popularMoviesPage++
+                    moviesPage++
                     getPopularMovies()
                 }
             }
