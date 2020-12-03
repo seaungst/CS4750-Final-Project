@@ -1,44 +1,77 @@
 package com.bignerdranch.android.cs4750finalproject
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import androidx.recyclerview.widget.LinearLayoutManager
+import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_watch_list.*
 
 class WatchListActivity : AppCompatActivity() {
 
-    private var movieTitlesListWL = mutableListOf<String>()
-    private var movieGenresListWL = mutableListOf<String>()
-    private var moviePostersListWL = mutableListOf<Int>()
+    private lateinit var moviesWL: RecyclerView
+    private lateinit var moviesAdapterWL: MoviesAdapter
+    private lateinit var moviesLayoutMgrWL: GridLayoutManager
+
+    private var moviesPageWL = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_watch_list)
 
-        postToListWL()
+        moviesWL = findViewById(R.id.wl_recyclerView)
+        moviesLayoutMgrWL = GridLayoutManager(
+            this, 3)
+        wl_recyclerView.layoutManager = moviesLayoutMgrWL
+        moviesAdapterWL = MoviesAdapter(mutableListOf()) { movie -> showMovieDetails(movie) }
+        wl_recyclerView.adapter = moviesAdapterWL
 
-        wl_recyclerView.layoutManager = LinearLayoutManager(this)
-        wl_recyclerView.adapter = RecyclerAdapter(movieTitlesListWL,
-            movieGenresListWL, moviePostersListWL)
+        getPopularMovies()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater = menuInflater
-        inflater.inflate(R.menu.movie_search_bar, menu)
-        return true
+    private fun getPopularMovies() {
+        MoviesRepository.getPopularMovies(
+            moviesPageWL,
+            ::onPopularMoviesFetched,
+            ::onError
+        )
     }
 
-    private fun addToListWL(movie_titleWL: String, movie_genreWL: String, movie_posterWL: Int){
-        movieTitlesListWL.add(movie_titleWL)
-        movieGenresListWL.add(movie_genreWL)
-        moviePostersListWL.add(movie_posterWL)
+    private fun onPopularMoviesFetched(movies: List<Movie>) {
+        moviesAdapterWL.appendMovies(movies)
+        attachPopularMoviesOnScrollListener()
     }
 
-    private fun postToListWL() {
-        for (i in 1..25) {
-            addToListWL("Movie Title $i",
-                "Movie Genre $i", R.drawable.movie_placeholder)
-        }
+    private fun attachPopularMoviesOnScrollListener() {
+        moviesWL.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                val totalItemCount = moviesLayoutMgrWL.itemCount
+                val visibleItemCount = moviesLayoutMgrWL.childCount
+                val firstVisibleItem = moviesLayoutMgrWL.findFirstVisibleItemPosition()
+
+                if (firstVisibleItem + visibleItemCount >= totalItemCount / 2) {
+                    moviesWL.removeOnScrollListener(this)
+                    moviesPageWL++
+                    getPopularMovies()
+                }
+            }
+        })
     }
+
+    private fun showMovieDetails(movie: Movie) {
+        val intent = Intent(this, MovieDetailsActivity::class.java)
+        intent.putExtra(MOVIE_BACKDROP, movie.backdropPath)
+        intent.putExtra(MOVIE_POSTER, movie.posterPath)
+        intent.putExtra(MOVIE_TITLE, movie.title)
+        intent.putExtra(MOVIE_RATING, movie.rating)
+        intent.putExtra(MOVIE_RELEASE_DATE, movie.releaseDate)
+        intent.putExtra(MOVIE_OVERVIEW, movie.overview)
+        startActivity(intent)
+    }
+
+    private fun onError() {
+        Toast.makeText(this, getString(R.string.error_fetch_movies), Toast.LENGTH_SHORT).show()
+    }
+
 }

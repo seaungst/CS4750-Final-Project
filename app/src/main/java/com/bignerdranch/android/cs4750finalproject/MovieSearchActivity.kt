@@ -11,22 +11,22 @@ import kotlinx.android.synthetic.main.activity_movie_search.*
 
 class MovieSearchActivity : AppCompatActivity() {
 
-    private lateinit var movies: RecyclerView
-    private lateinit var moviesAdapter: MoviesAdapter
-    private lateinit var moviesLayoutMgr: GridLayoutManager
+    private lateinit var moviesMS: RecyclerView
+    private lateinit var moviesAdapterMS: MoviesAdapter
+    private lateinit var moviesLayoutMgrMS: GridLayoutManager
 
-    private var moviesPage = 1
+    private var moviesPageMS = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_search)
 
-        movies = findViewById(R.id.sm_recyclerView)
-        moviesLayoutMgr = GridLayoutManager(
+        moviesMS = findViewById(R.id.ms_recyclerView)
+        moviesLayoutMgrMS = GridLayoutManager(
             this, 3)
-        sm_recyclerView.layoutManager = moviesLayoutMgr
-        moviesAdapter = MoviesAdapter(mutableListOf()) { movie -> showMovieDetails(movie) }
-        sm_recyclerView.adapter = moviesAdapter
+        ms_recyclerView.layoutManager = moviesLayoutMgrMS
+        moviesAdapterMS = MoviesAdapter(mutableListOf()) { movie -> showMovieDetails(movie) }
+        ms_recyclerView.adapter = moviesAdapterMS
 
         getPopularMovies()
     }
@@ -39,27 +39,27 @@ class MovieSearchActivity : AppCompatActivity() {
 
     private fun getPopularMovies() {
         MoviesRepository.getPopularMovies(
-            moviesPage,
+            moviesPageMS,
             ::onPopularMoviesFetched,
             ::onError
         )
     }
 
     private fun onPopularMoviesFetched(movies: List<Movie>) {
-        moviesAdapter.appendMovies(movies)
+        moviesAdapterMS.appendMovies(movies)
         attachPopularMoviesOnScrollListener()
     }
 
     private fun attachPopularMoviesOnScrollListener() {
-        movies.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+        moviesMS.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                val totalItemCount = moviesLayoutMgr.itemCount
-                val visibleItemCount = moviesLayoutMgr.childCount
-                val firstVisibleItem = moviesLayoutMgr.findFirstVisibleItemPosition()
+                val totalItemCount = moviesLayoutMgrMS.itemCount
+                val visibleItemCount = moviesLayoutMgrMS.childCount
+                val firstVisibleItem = moviesLayoutMgrMS.findFirstVisibleItemPosition()
 
                 if (firstVisibleItem + visibleItemCount >= totalItemCount / 2) {
-                    movies.removeOnScrollListener(this)
-                    moviesPage++
+                    moviesMS.removeOnScrollListener(this)
+                    moviesPageMS++
                     getPopularMovies()
                 }
             }

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--MOVIE DATABASE IMPLEMENTATION - ALLISON (commented out on the bottom of the file)-->
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -40,7 +38,7 @@
         android:textStyle="bold"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/sm_recyclerView"
+        android:id="@+id/ms_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="65dp"

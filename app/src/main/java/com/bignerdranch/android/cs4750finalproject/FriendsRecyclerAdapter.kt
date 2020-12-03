@@ -16,7 +16,7 @@ class FriendsRecyclerAdapter (private var friend_title: List<String>)
             itemView.setOnClickListener { v : View ->
                 val position: Int = adapterPosition
                 Toast.makeText(itemView.context,
-                    "Friend #${position + 1} pressed!",
+                    "Friend ${position + 1} pressed!",
                     Toast.LENGTH_SHORT).show()
             }
         }
