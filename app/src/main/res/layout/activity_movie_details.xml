@@ -20,6 +20,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <Button
+            android:id="@+id/add_searched_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/add_searched_movie"
+            android:background="#fcc139"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movie_overview"
+            app:layout_constraintVertical_bias="0.50" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/movie_poster_card"
             android:layout_width="128dp"
