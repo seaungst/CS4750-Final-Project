@@ -13,7 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MovieDetailsActivity"></activity>
+        <activity android:name=".MovieDetailsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MovieSearchActivity" />
+        </activity>
         <activity
             android:name=".FriendsActivity"
             android:parentActivityName=".StartActivity">

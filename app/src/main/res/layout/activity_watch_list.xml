@@ -47,12 +47,4 @@
         tools:itemCount="50"
         tools:listitem="@layout/movie_item_layout" />
 
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_margin="10dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/add_button"/>
-
 </RelativeLayout>
