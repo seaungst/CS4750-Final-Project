@@ -21,12 +21,13 @@
 
     <string name="watch_list">Watch List</string>
     <string name="search_movies">Search Movies</string>
-    <string name ="add_searched_movie">Add to Watchlist</string>
+    <string name="add_searched_movie">Add to Watchlist</string>
 
+    <string name="friends_watch_list">Friends Watch List</string>
     <string name="friends_list">Friends List</string>
     <string name="movie_view">( Movie View )</string>
 
-<!--Strings for movie database implementation - Allison-->
+    <!--Strings for movie database implementation - Allison-->
     <string name="popular">Popular</string>
     <string name="most_popular_movies">Most popular movies</string>
     <string name="error_fetch_movies">Please check your internet connection</string>

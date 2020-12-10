@@ -1,11 +1,15 @@
 package com.bignerdranch.android.cs4750finalproject
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_friends.*
 import kotlinx.android.synthetic.main.activity_watch_list.*
+
+
+//const val FRIEND_TITLE = "friend name"
 
 class FriendsActivity : AppCompatActivity() {
 
@@ -38,4 +42,5 @@ class FriendsActivity : AppCompatActivity() {
             addToList("Friend $i", R.mipmap.logo_round)
         }
     }
+
 }

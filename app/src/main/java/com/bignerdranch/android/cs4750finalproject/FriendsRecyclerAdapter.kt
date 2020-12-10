@@ -1,9 +1,11 @@
 package com.bignerdranch.android.cs4750finalproject
 
+import android.content.Intent
 import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 
 class FriendsRecyclerAdapter (private var friend_title: List<String>, private var friend_icon: List<Int>)
@@ -20,6 +22,10 @@ class FriendsRecyclerAdapter (private var friend_title: List<String>, private va
                 Toast.makeText(itemView.context,
                     "Friend ${position + 1} added!",
                     Toast.LENGTH_SHORT).show()
+
+                //Attempt to connect a friends watch list on click - Camryn
+                /*val fwlIntent = Intent(FriendsRecyclerAdapter, FriendsWatchListActivity::class.java)
+                startActivity(fwlIntent)*/
             }
         }
     }
