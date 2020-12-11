@@ -7,8 +7,8 @@ import android.util.Patterns
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
+//import com.google.firebase.firestore.ktx.firestore
+//import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
@@ -19,7 +19,7 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
         auth = FirebaseAuth.getInstance()
-        val db = Firebase.firestore
+        //val db = Firebase.firestore
 
         sign_up_sign_up.setOnClickListener {
             signUpUser()
@@ -64,6 +64,7 @@ class SignUpActivity : AppCompatActivity() {
 
                 if (task.isSuccessful) {
                     val user = auth.currentUser
+                    updateUISignUp(user)
                 }
 
                 else {
@@ -72,13 +73,13 @@ class SignUpActivity : AppCompatActivity() {
             }
     }
 
+    /*
     private fun updateUsername() {
         val user = auth.currentUser
-        //var name = user!!.displayName
+        var name = user!!.displayName
 
         //This section was made to create a username for the user to store in the database
         //Not currently functional
-        /*
         val username = sign_up_email.text.toString()
             .substringBefore(delimiter = "@",
                 missingDelimiterValue = "Username Not Found")
@@ -96,8 +97,8 @@ class SignUpActivity : AppCompatActivity() {
                     ).show()
                 }
             }
-         */
     }
+     */
 
     private fun updateUISignUp(currentUser : FirebaseUser?) {
 
