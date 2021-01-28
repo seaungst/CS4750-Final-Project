@@ -1,14 +1,11 @@
-CS4750-Final-Project
+## CS4750-Final-Project
 
 Selena Aungst, Sonia Carrillo, Allison Inciong, Camryn Sumabat, & Alysia Wong
-
 Professor Johannsen
+CS 4750.01 
+11 Dec. 2020 
 
-CS 4750.01
-
-11 Dec. 2020
-
-
+### App Overview
 Our app, FlixPix, allows users to create an account, sign in, view movies, and view a list of their friends. 
 It uses Google Firebase as its user database and it uses The Movie Database (TMDb) as its movie database. 
 All users are verified through Firebase in making sure that their passwords are at least 6 characters long, 
@@ -21,6 +18,7 @@ selected by the user. The friends list currently shows a list of dummy data for 
 button logs the user out through Firebase and takes them back to the home page where they can choose to login 
 or sign up again. 
 
+### Implementation
 Currently, our app is not 100% implemented. The login, sign up, and home pages are all fully functional, as are the
 buttons for following pages: search for movies, watch list, friends list, and sign out. Currently, our search for movies 
 page has both the search bar and the display of movie posters, but the search feature is not yet functional. Additionally, 
