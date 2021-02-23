@@ -1,11 +1,7 @@
 ## CS4750-Final-Project
-
-Selena Aungst, Sonia Carrillo, Allison Inciong, Camryn Sumabat, & Alysia Wong
-
-Professor Johannsen
-
-CS 4750.01 
-
+Selena Aungst, Sonia Carrillo, Allison Inciong, Camryn Sumabat, & Alysia Wong<br>
+Professor Johannsen<br>
+CS 4750.01<br>
 11 Dec. 2020 
 
 ### App Overview
@@ -37,3 +33,12 @@ these features in time was finding a way to add information to Firebase Firestor
 email verified users. There were very few resources online for how to perform this specific task in Firebase, and even 
 fewer were in Kotlin. In the future, we hope to potentially implement these features in the main app if we ever put this 
 app on the app store.
+
+### Screenshots
+<img src="https://github.com/seaungst/CS4750-Final-Project/blob/master/Screenshots/FlixPix%20%20Homepage.png" width="400" alt="Home Page">
+<img src="https://github.com/seaungst/CS4750-Final-Project/blob/master/Screenshots/FlixPix%20Login%20Page.png" width="400" alt="Login Page">
+<img src="https://github.com/seaungst/CS4750-Final-Project/blob/master/Screenshots/FlixPix%20Sign%20Up%20Page.png" width="400" alt="Sign Up Page">
+<img src="https://github.com/seaungst/CS4750-Final-Project/blob/master/Screenshots/FlixPix%20Start%20Page.png" width="400" alt="Start Page">
+<img src="https://github.com/seaungst/CS4750-Final-Project/blob/master/Screenshots/FlixPix%20Movie%20View%20Page.png" width="400" alt="Movie View Page">
+<img src="https://github.com/seaungst/CS4750-Final-Project/blob/master/Screenshots/FlixPix%20Search%20Friends.png" width="400" alt="Search Friends">
+<img src="https://github.com/seaungst/CS4750-Final-Project/blob/master/Screenshots/FlixPix%20Search%20Movies.png" width="400" alt="Search Movies">
